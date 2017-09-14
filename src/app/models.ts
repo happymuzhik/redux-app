@@ -1,3 +1,3 @@
 export class Todo {
-	constructor(public text: string) {}
+  constructor(public title: string, public isCompleted: boolean = false) {}
 }

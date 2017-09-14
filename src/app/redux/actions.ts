@@ -21,11 +21,16 @@ export class AppActions {
     this.ngRedux.dispatch({ type: Constants.CLEAR_TODOS });
   }
 
-  increment() {
-    // this.ngRedux.dispatch({ type: CounterActions.INCREMENT });
+  addTodo(title: string) {
+    this.ngRedux.dispatch({ type: Constants.ADD_TODO, payload: title });
   }
 
-  decrement() {
-    // this.ngRedux.dispatch({ type: CounterActions.DECREMENT });
+  toggleTodo(title: string) {
+    this.ngRedux.dispatch({ type: Constants.TOGGLE_TODO, payload: title });
   }
+
+  removeTodo(title: string) {
+    this.ngRedux.dispatch({ type: Constants.REMOVE_TODO, payload: title });
+  }
+
 }
